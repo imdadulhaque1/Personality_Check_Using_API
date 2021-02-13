@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Show Personality Based on Your Name</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Luckiest+Guy">
+</head>
+<body>
+  <section>
+    <h1>What does your name say about your Personality ?</h1>
+    <div class="centerDiv">
+      <div class="details">
+        <label><b><i>Enter you Name</i></b></label> <br>
+        <input type="text" name="text" id="nameid" value="">
+      </div>
+
+      <div class="imgdiv">
+        <img src="images/imdad.jpg" width="270" height="270" id="imgchange" alt="">
+      </div>
+
+      <button type="submit">Click Me</button>
+
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js" ></script>
+  <script>
+  $(document).ready(function () {
+    $('button').click(function () {
+      const name = $('nameid').val();
+      alert(name);
+      $('#imgchange').attr('src','https://joeschmoe.io/api/v1/${name}');
+
+    });
+
+  });
+  </script>
+</body>
+</html>
